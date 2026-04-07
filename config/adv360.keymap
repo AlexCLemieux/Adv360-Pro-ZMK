@@ -8,13 +8,28 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
+
+#define BASE 0
+#define KP   1
+#define FN   2
+#define MOD  3
+#define NAV  4
+#define MOUSE 5
+
+#define XXX &none
+#define ___ &trans
+
+/* Global defaults */
+
+#define QUICK_TAP_MS 175
+
 #include "mouse.dtsi"
 
 &sl { ignore-modifiers; };
 
 &lt {
     flavor = "balanced";
-    quick-tap-ms = <175>;
+    quick-tap-ms = <QUICK_TAP_MS>;
     tapping-term-ms = <200>;
 };
 
